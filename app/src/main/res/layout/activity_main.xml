@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainSc">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mainContainer"
+            android:padding="18dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/topContainer">
+
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/imageContainer"
+                    android:background="@drawable/btn_green">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/expand_left"
+                            android:layout_centerInParent="true"
+                            app:tint="@color/white" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/logoContainer"
+                android:layout_below="@+id/topContainer"
+                android:layout_marginTop="20dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logo"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/imglogo" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logoContainer"
+                android:layout_marginTop="15dp"
+                android:id="@+id/logotitle">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtwelcome"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Welcome back"
+                    android:layout_centerInParent="true"
+                    android:textAlignment="center"
+                    android:padding="8dp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtwelcome"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Login to your account"
+                    android:textSize="15sp"
+                    android:padding="8dp"
+                    android:textAlignment="center"/>
+
+
+
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logotitle"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:id="@+id/txtContainer">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtuseremail"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:textSize="15sp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/btn"
+                    android:hint="Enter email or phone"
+                    android:padding="12dp"
+                    android:textColorHint="@color/grayColor" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtpassword"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/txtuseremail"
+                    android:layout_height="58dp"
+                    android:textSize="15sp"
+                    android:layout_marginTop="13dp"
+                    android:background="@drawable/btn"
+                    android:inputType="textPassword"
+                    android:hint="Password"
+                    android:padding="12dp"
+                    android:textColorHint="@color/grayColor"
+                    android:drawableRight="@drawable/ant_design_eye_invisible_filled"
+                    android:drawablePadding="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtpassword"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/remContainer"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/chremember"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="Remember me"
+                            android:fontFamily="@font/poppins_regular"
+                            app:buttonTint="@color/colorgreen"
+                            android:textColor="@color/grayColor" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtforgetpassword"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:textSize="15sp"
+                            android:layout_alignParentEnd="true"
+                            android:text="Forget Password?"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="@color/colorgreen" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnsendreport"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/remContainer"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/btn_backgrad"
+                    android:clickable="true"
+                    android:text="Log In"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/orContainer"
+                android:padding="12dp"
+                android:layout_below="@+id/txtContainer">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtor"
+                    android:text="OR"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:padding="8dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/black"
+                    android:layout_centerInParent="true" />
+
+                <View
+                    android:id="@+id/viewbl"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/txtor"
+                    android:background="@drawable/btn_backleft" />
+
+                <View
+                    android:id="@+id/viewbl2"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/txtor"
+                    android:background="@drawable/btn_backright" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bioContainer"
+                android:layout_below="@+id/orContainer">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/imgbio"
+                    android:src="@drawable/fingerprint4"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/accContainer"
+                android:layout_below="@+id/bioContainer">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_centerInParent="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grayColor"
+                    android:text="Don't have an Account?"
+                    android:id="@+id/txtaccount"
+                    android:textSize="12sp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppins_regular" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorgreen"
+                    android:text="Create Account"
+                    android:textSize="12sp"
+                    android:layout_toRightOf="@+id/txtaccount"
+                    android:fontFamily="@font/poppins_regular"
+                    android:id="@+id/txtcreateaccount"
+                    android:layout_marginLeft="3dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </ScrollView>
+
+</RelativeLayout>
